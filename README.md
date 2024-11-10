@@ -11,16 +11,22 @@
     Download your Loom videos with lovido! 🚀
 </strong></p>
 <p align="center"><strong>
-    It's fully FREE. 
+    It's fully FREE. 💜 
+</strong></p>
+<p align="center"><strong>
+    and Open Source. 🌟
 </strong></p>
 
 
 ## 🚀 Watch the video
-How to download your Loom videos with lovido (Loom Downloader)
+How to download your Loom videos with lovido (Loom Video Downloader)
 
-[![YouTube]()]()
+[![Watch on YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?style=for-the-badge&logo=youtube)](https://youtu.be/wyp8tRTLLfQ?si=GXlfNcXuF2qOeSsO)
 
-### Try it now [lovido](https://lovido.vercel.app/)
+### Try it now [lovido.lol](https://lovido.lol)
+
+### 🚀 Powered by AI/ML API
+With AI/ML API I can access to over 200 AI models with one API endpoint. It's super cool! Now I can switch between models with just one click. 🔥 [Here's is how... click me](https://aimlapi.com/?via=ibrohim)
 
 ## 📦 Run Locally
 
@@ -65,4 +71,9 @@ Kindly check the [CONTRIBUTING.md](https://github.com/abdibrokhim/loom-dl-web/bl
 [![Star History Chart](https://api.star-history.com/svg?repos=abdibrokhim/loom-dl-web&type=Date)](https://star-history.com/#abdibrokhim/loom-dl-web&Date)
 
 ## 🙏 Support
+
 If you wish to support further development and feel extra awesome, you can [donate](https://buymeacoffee.com/abdibrokhim/), become a [Patron](https://www.patreon.com/abdibrokhim) or [follow on LinkedIn](https://www.linkedin.com/in/abdibrokhim/).
+
+## 🦄 Want to learn build stuff from coool guy?
+
+Here's my topmate profile https://topmate.io/join/abdibrokhim book session with me. it's Absolutely FREE! 🎉 (free services for everyone , i want to help as much as people possible, so far i could help 200K developers, let's goooooo, [imcook.in](https://imcook.in))

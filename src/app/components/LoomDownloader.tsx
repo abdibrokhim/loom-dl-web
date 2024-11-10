@@ -72,6 +72,37 @@ const LoomDownloader = () => {
                     onClose={() => setNotification(null)}
                 />
             )}
+            <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4 absolute sm:top-[100px] top-[20px]">
+                <div className="flex items-center bg-orange-500 text-white p-3 rounded-lg shadow-lg hover:bg-orange-600">
+                    <span className="mr-2 text-lg">🚀</span>
+                    <span>
+                    One API 200+, AI Models, Uptime 99.99%. 
+                    <a href="https://aimlapi.com/?via=ibrohim" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
+                        Try it now
+                    </a>
+                    </span>
+                </div>
+                
+                <div className="flex items-center bg-blue-500 text-white p-3 rounded-lg shadow-lg hover:bg-blue-600">
+                    <span className="mr-2 text-lg">🤖</span>
+                    <span>
+                    HumanAIze AI text with the smartest AI humanizer. 
+                    <a href="https://humanaize.vercel.app/" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
+                        Humanize AI-shitt
+                    </a>
+                    </span>
+                </div>
+                
+                <div className="flex items-center bg-green-500 text-white p-3 rounded-lg shadow-lg hover:bg-green-600">
+                    <span className="mr-2 text-lg">🤖</span>
+                    <span>
+                    Book a Meeting with #1 Cooker. 
+                    <a href="https://imcook.in" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
+                        Let's cook
+                    </a>
+                    </span>
+                </div>
+            </div>
             <div className="mb-6 inline-flex justify-center text-2xl font-semibold leading-9">
                 <h1>Paste Loom Video URL below</h1>
             </div>
@@ -104,7 +135,7 @@ const LoomDownloader = () => {
                 user-profile="https://topmate.io/embed/profile/abdibrokhim?theme=D5534D"
                 btn-style='{"backgroundColor":"#fff","color":"#000","border":"1px solid #000"}'
                 embed-version="v1"
-                button-text="Hey, dear! Let's chat."
+                button-text="Book a meeting"
                 position-right="30px"
                 position-bottom="30px"
                 custom-padding="0px"
