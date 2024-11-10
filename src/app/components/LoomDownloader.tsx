@@ -1,8 +1,9 @@
 // app/page.tsx (or create a new component and import it)
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Notification from '../lib/notify';
 import Footer from './Footer';
@@ -63,7 +64,7 @@ const LoomDownloader = () => {
     );
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-white p-4 bg-[#212121e6]">
+        <div className="flex flex-col items-center justify-center min-h-screen text-white p-4 bg-[#212121e6] noselect">
             <Analytics />
             {notification && (
                 <Notification
@@ -103,7 +104,7 @@ const LoomDownloader = () => {
                     </span>
                 </div>
             </div>
-            <div className="mb-6 inline-flex justify-center text-2xl font-semibold leading-9">
+            <div className="mb-6 mt-64 inline-flex justify-center text-2xl font-semibold leading-9">
                 <h1>Paste Loom Video URL below</h1>
             </div>
             <div className="lg:w-[60%] w-full mx-auto flex items-center p-2 mb-8 shadow-lg gap-4 bg-[#2e2e2e] rounded-full">
@@ -127,7 +128,27 @@ const LoomDownloader = () => {
                     }
                 </button>
             </div>
-            <div className='relative bottom-[-200px]'> 
+            <div className='mt-16'>
+                <div className='flex flex-row gap-4 items-center justify-center p-4 bg-[#4e4e4e] rounded-md shadow-lg'>
+                    <div className='flex flex-col gap-4'>
+                        <p className='text-lg font-bold'>AI Sticker Maker 😍</p>
+                        <button onClick={() => {
+                            window.open('https://ai-sticker-maker.vercel.app/', '_blank');
+                        }} className='bg-[#eeeeee] text-black text-md font-black p-2 rounded-md'>Try for FREE <FontAwesomeIcon icon={faArrowRight} /></button>
+                    </div>
+                    <a href='https://ai-sticker-maker.vercel.app/' target='_blank'>
+                        <Image 
+                            src="/img-gbDUBHcHIwK2gVyEwiOXhvvi.png"
+                            alt="Generated Sticker" 
+                            objectFit="cover"
+                            width={150} 
+                            height={150} 
+                            className="rounded-md nodrag" 
+                            />
+                    </a>
+                </div>
+            </div>
+            <div className="mt-8 p-8">
                 <Footer />
             </div>
             <script
