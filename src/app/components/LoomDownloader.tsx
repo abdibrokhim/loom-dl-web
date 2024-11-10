@@ -74,32 +74,12 @@ const LoomDownloader = () => {
                 />
             )}
             <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4 absolute sm:top-[100px] top-[20px]">
-                <div className="flex items-center bg-orange-500 text-white p-3 rounded-lg shadow-lg hover:bg-orange-600">
+                <div className="flex items-center bg-orange-600 text-white p-3 rounded-lg shadow-lg hover:bg-orange-500">
                     <span className="mr-2 text-lg">🚀</span>
                     <span>
                     One API 200+, AI Models, Uptime 99.99%. 
-                    <a href="https://aimlapi.com/?via=ibrohim" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
-                        Try it now
-                    </a>
-                    </span>
-                </div>
-                
-                <div className="flex items-center bg-blue-500 text-white p-3 rounded-lg shadow-lg hover:bg-blue-600">
-                    <span className="mr-2 text-lg">🤖</span>
-                    <span>
-                    HumanAIze AI text with the smartest AI humanizer. 
-                    <a href="https://humanaize.vercel.app/" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
-                        Humanize AI-shitt
-                    </a>
-                    </span>
-                </div>
-                
-                <div className="flex items-center bg-green-500 text-white p-3 rounded-lg shadow-lg hover:bg-green-600">
-                    <span className="mr-2 text-lg">🤖</span>
-                    <span>
-                    Book a Meeting with #1 Cooker. 
-                    <a href="https://imcook.in" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
-                        Let&apos;s cook
+                    <a href="https://aimlapi.com/?via=ibrohim" target="_blank" className="ml-2 text-black hover:font-black bg-[#eeeeee] hover:bg-[#ffffff] text-md font-black p-2 rounded-md">
+                        Try for FREE <FontAwesomeIcon icon={faArrowRight} />
                     </a>
                     </span>
                 </div>
@@ -128,24 +108,45 @@ const LoomDownloader = () => {
                     }
                 </button>
             </div>
+            {/* promo */}
             <div className='mt-16'>
-                <div className='flex flex-row gap-4 items-center justify-center p-4 bg-[#4e4e4e] rounded-md shadow-lg'>
-                    <div className='flex flex-col gap-4'>
-                        <p className='text-lg font-bold'>AI Sticker Maker 😍</p>
-                        <button onClick={() => {
-                            window.open('https://ai-sticker-maker.vercel.app/', '_blank');
-                        }} className='bg-[#eeeeee] text-black text-md font-black p-2 rounded-md'>Try for FREE <FontAwesomeIcon icon={faArrowRight} /></button>
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <div className='flex flex-row gap-4 items-center justify-center p-4 bg-blue-700 hover:bg-blue-600 rounded-md shadow-lg'>
+                        <div className='flex flex-col gap-4'>
+                            <p className='text-lg font-bold'>AI Sticker Maker 😍</p>
+                            <button onClick={() => {
+                                window.open('https://ai-sticker-maker.vercel.app/', '_blank');
+                            }} className='bg-[#eeeeee] hover:bg-[#ffffff] text-black text-md font-black p-2 rounded-md'>Try for FREE <FontAwesomeIcon icon={faArrowRight} /></button>
+                        </div>
+                        <a href='https://ai-sticker-maker.vercel.app/' target='_blank'>
+                            <Image 
+                                src="/img-gbDUBHcHIwK2gVyEwiOXhvvi.png"
+                                alt="Generated Sticker" 
+                                objectFit="cover"
+                                width={150} 
+                                height={150} 
+                                className="rounded-md nodrag" 
+                                />
+                        </a>
                     </div>
-                    <a href='https://ai-sticker-maker.vercel.app/' target='_blank'>
-                        <Image 
-                            src="/img-gbDUBHcHIwK2gVyEwiOXhvvi.png"
-                            alt="Generated Sticker" 
-                            objectFit="cover"
-                            width={150} 
-                            height={150} 
-                            className="rounded-md nodrag" 
-                            />
-                    </a>
+                    <div className='flex flex-row gap-4 items-center justify-center p-4 bg-green-700 hover:bg-green-600 rounded-md shadow-lg'>
+                        <div className='flex flex-col gap-4'>
+                            <p className='text-lg font-bold'>AI Text Humanizer 🤖</p>
+                            <button onClick={() => {
+                                window.open('https://humanaize.vercel.app/', '_blank');
+                            }} className='bg-[#eeeeee] hover:bg-[#ffffff] text-black text-md font-black p-2 rounded-md'>Try for FREE <FontAwesomeIcon icon={faArrowRight} /></button>
+                        </div>
+                        <a href='https://humanaize.vercel.app/' target='_blank'>
+                            <Image 
+                                src="/results_1.png"
+                                alt="AI Text Humanizer" 
+                                objectFit="cover"
+                                width={300} 
+                                height={300} 
+                                className="rounded-md nodrag" 
+                                />
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className="mt-8 p-8">
