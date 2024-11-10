@@ -98,7 +98,7 @@ const LoomDownloader = () => {
                     <span>
                     Book a Meeting with #1 Cooker. 
                     <a href="https://imcook.in" target="_blank" className="underline hover:text-yellow-300 hover:font-black">
-                        Let's cook
+                        Let&apos;s cook
                     </a>
                     </span>
                 </div>
