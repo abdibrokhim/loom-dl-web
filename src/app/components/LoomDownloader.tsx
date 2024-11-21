@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Notification from '../lib/notify';
 import Footer from './Footer';
 import { Analytics } from "@vercel/analytics/react"
+import OverlayCard from './overlaycard';
 
 const LoomDownloader = () => {
     const [loomUrl, setLoomUrl] = useState('');
@@ -73,6 +74,7 @@ const LoomDownloader = () => {
                     onClose={() => setNotification(null)}
                 />
             )}
+            <OverlayCard />
             <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4 absolute sm:top-[100px] top-[20px]">
                 <div className="flex items-center bg-orange-600 text-white p-3 rounded-lg shadow-lg hover:bg-orange-500">
                     <span className="mr-2 text-lg">🚀</span>
