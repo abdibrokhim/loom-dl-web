@@ -16,7 +16,7 @@ const OverlayCard = () => {
     setShowOverlay(false);
 
     // Show the overlay again after 5 minutes
-    setTimeout(showAgain, 5000); // 5 minutes
+    setTimeout(showAgain, 300000); // 5 minutes
   };
 
   const showAgain = () => {
