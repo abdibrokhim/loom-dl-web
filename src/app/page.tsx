@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Notification from './utils/notify';
 import { loader } from './utils/loader';
 import { Analytics } from "@vercel/analytics/react"
-import Footer from './components/footer';
+import Footer from './components/Footer';
 
 export default function Home() {
   const [loomUrl, setLoomUrl] = useState('');
