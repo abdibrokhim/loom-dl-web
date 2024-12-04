@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Notification from '../lib/notify';
+import Notification from '../utils/notify';
 import Footer from './Footer';
 import { Analytics } from "@vercel/analytics/react"
 import OverlayCard from './overlaycard';
@@ -74,7 +74,7 @@ const LoomDownloader = () => {
                     onClose={() => setNotification(null)}
                 />
             )}
-            <OverlayCard />
+            {/* <OverlayCard />
             <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-4 space-y-4 sm:space-y-0 p-4 absolute sm:top-[100px] top-[20px]">
                 <div className="flex items-center bg-orange-600 text-white p-3 rounded-lg shadow-lg hover:bg-orange-500">
                     <span className="mr-2 text-lg">🚀</span>
@@ -85,9 +85,9 @@ const LoomDownloader = () => {
                     </a>
                     </span>
                 </div>
-            </div>
-            <div className="mb-6 mt-64 inline-flex justify-center text-2xl font-semibold leading-9">
-                <h1>Paste Loom Video URL below</h1>
+            </div> */}
+            <div className="mb-6 mt-64 inline-flex justify-center text-xl md:text-2xl font-semibold leading-9">
+                <h1>paste Loom video URL below...</h1>
             </div>
             <div className="lg:w-[60%] w-full mx-auto flex items-center p-2 mb-8 shadow-lg gap-4 bg-[#2e2e2e] rounded-full">
                 <input
@@ -95,7 +95,7 @@ const LoomDownloader = () => {
                     value={loomUrl}
                     onChange={(e) => setLoomUrl(e.target.value)}
                     placeholder="Enter loom video URL here..."
-                    className="placeholder:text-[#aeaeae] bg-transparent focus:outline-none text-white outline-none w-full px-4" 
+                    className="placeholder:text-[#aeaeae] placeholder:text-sm text-sm bg-transparent focus:outline-none text-white outline-none w-full px-4" 
                     disabled={loading}
                 />
                 <button
@@ -105,13 +105,23 @@ const LoomDownloader = () => {
                         loomUrl === '' ? 'cursor-not-allowed bg-[#4e4e4e] text-black'  : 'cursor-pointer bg-[#eeeeee] text-black'}`}
                     >
                     {!loading 
-                        ? <FontAwesomeIcon icon={faDownload} />
+                        ? <span className='flex justify-center items-center text-black text-xl'>
+                            <Image
+                                aria-hidden
+                                className=""
+                                src="/download.svg"
+                                alt="Copy icon"
+                                width={16}
+                                height={16}
+                            />
+                        </span>
                         : <span className='flex justify-center items-center text-black text-xl'>{loader()}</span>
                     }
                 </button>
             </div>
+            
             {/* promo */}
-            <div className='mt-16'>
+            {/* <div className='mt-16'>
                 <div className='flex flex-col md:flex-row gap-4'>
                     <div className='flex flex-row gap-4 items-center justify-center p-4 bg-blue-700 hover:bg-blue-600 rounded-md shadow-lg'>
                         <div className='flex flex-col gap-4'>
@@ -150,11 +160,14 @@ const LoomDownloader = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
             <div className="mt-8 p-8">
                 <Footer />
             </div>
-            <script
+
+
+            {/* <script
                 src="https://topmate-embed.s3.ap-south-1.amazonaws.com/v1/topmate-embed.js"
                 user-profile="https://topmate.io/embed/profile/abdibrokhim?theme=D5534D"
                 btn-style='{"backgroundColor":"#fff","color":"#000","border":"1px solid #000"}'
@@ -166,7 +179,7 @@ const LoomDownloader = () => {
                 custom-font-size="16px"
                 custom-font-weight="500"
                 custom-width="200px"
-            ></script>
+            ></script> */}
         </div>
     );
 };

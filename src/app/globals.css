@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #212121e6;
-  --foreground: #fff;
+  --violet: #625df5;
+  --bg-a: #0B0E11;
+  --text-a: #FFFFFF;
+  --text-b: #C3C4C7;
+  --text-c: #787B89;
+  --orange: #ee5d19;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #212121e6;
-    --foreground: #ededed;
+    --violet: hsla(242,88.4%,66.3%,1);
+    --bg-a: #0B0E11;
+    --text-a: #FFFFFF;
+    --text-b: #C3C4C7;
+    --text-c: #787B89;
+    --orange: #ee5d19;
   }
 }
 
@@ -34,4 +42,9 @@ body {
 }
 .nodrag {
   pointer-events: none;      /* Prevents mouse events on the image */
+}
+
+::selection {
+  background-color: var(--violet);
+  color: var(--text-a);
 }

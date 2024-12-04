@@ -14,10 +14,10 @@ const Notification: React.FC<NotificationProps> = ({ message, type, onClose }) =
     return () => clearTimeout(timer);
   }, [onClose]);
 
-  const bgColor = type === 'error' ? 'bg-red-500' : type === 'success' ? 'bg-green-500' : 'bg-blue-500';
+  const bgColor = type === 'error' ? 'bg-[#f84f31]' : type === 'success' ? 'bg-[#23c552]' : 'bg-[#1e90ff]';
 
   return (
-    <div className={`fixed top-10 left-1/2 transform -translate-x-1/2 ${bgColor} text-white px-4 py-2 rounded-md shadow-lg z-50`}>
+    <div className={`fixed text-xs sm:text-md top-10 left-1/2 transform -translate-x-1/2 ${bgColor} text-white px-4 py-2 rounded-md shadow-lg z-50`}>
       <p>{message}</p>
     </div>
   );

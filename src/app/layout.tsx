@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Loom Video Downloader",
-  description: "Loom Video Downloader",
+  title: "lovido.lol | free loom video downloader",
+  description: "Download your favorite loom videos using lovido.lol for free!",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-a)]`}
       >
         {children}
       </body>

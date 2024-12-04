@@ -1,43 +1,124 @@
-import React from 'react';
+'use client';
 
-const Footer: React.FC = () => {
+import Image from "next/image";
+import React, { useState } from "react";
 
-    return (
-        <footer className="relative text-center leading-relaxed text-sm text-gray-500 text-xs">
-            <div className="leftright grid grid-cols-2 lg:grid-cols-[1fr_auto] lg:gap-[300px] gap-[100px] user-select-none items-start justify-start">
-                <div className="left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-                <a href="mailto:abdibrokhim@gmail.com" className={`textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} target="_blank" rel="noreferrer noopener">
-                    <i className="fas fa-fw fa-envelope mr-2"></i>
-                    <div className="text">Contact</div>
-                </a>
-                <a href="https://buymeacoffee.com/abdibrokhim/" className={`textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} target="_blank" rel="noreferrer noopener">
-                    <i className="fas fa-fw fa-donate mr-2"></i>
-                    <div className="text">Support</div>
-                </a>
-                <a href="https://github.com/abdibrokhim/loom-dl-web/" className={`textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} target="_blank" rel="noreferrer noopener">
-                    <i className="fas fa-fw fa-code mr-2"></i>
-                    <div className="text">Github</div>
-                </a>
-                <a href="https://discord.gg/nVtmDUN2sR" className={`textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} target="_blank" rel="noreferrer noopener">
-                    <i className="fab fa-fw fa-discord mr-2"></i>
-                    <div className="text">Discord</div>
-                </a>
-                <a href="https://linkedin.com/in/abdibrokhim" className={`textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} target="_blank" rel="noreferrer noopener">
-                    <i className="fab fa-fw fa-linkedin mr-2"></i>
-                    <div className="text">LinkedIn</div>
-                </a>
-                </div>
-                <div className="right grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-0">
-                    <a href='https://github.com/abdibrokhim/loom-dl-web/' target="_blank" rel="noreferrer noopener" 
-                        className={`current-theme textButton flex items-center justify-start lg:justify-start my-1 transition text-[#aeaeae] hover:text-white `} >
-                        <i className="fas fa-fw fa-code-branch mr-2"></i>
-                        <div className="text">Version:</div>
-                        <span id="newVersionIndicator" className="ml-2 bg-[var(--gray-700-color)] text-[var(--white-color)] rounded-full px-2">0.1.666</span>
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
-};
+export default function Footer() {
 
-export default Footer;
+  return (
+      <footer className="row-start-3 flex w-full max-w-3xl mx-auto flex-col md:flex-row-reverse gap-8 mt-16 md:mt-0 justify-between items-center pb-8">
+        <div className="flex gap-2 flex-wrap items-center justify-center">
+          <a
+              aria-label="Open Community Email"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="mailto:contact@theopencommunity.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/mail.svg"
+                alt="mail icon"
+                width={20}
+                height={20}
+              />
+          </a>
+          <a
+              aria-label="Open Community on GitHub"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://github.com/abdibrokhim?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/github-mark-white.svg"
+                alt="github icon"
+                width={20}
+                height={20}
+              />
+          </a>
+          <a
+              aria-label="Open Community on Discord"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://discord.gg/nVtmDUN2sR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/discord.svg"
+                alt="discord icon"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a
+              aria-label="Open Community on LinkedIn"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://linkedin.com/company/opencommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/linkedin.svg"
+                alt="linkedin icon"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a
+              aria-label="Open Community on X"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://x.com/xopencommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/x.svg"
+                alt="x icon"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a
+              aria-label="Open Community on Instagram"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://instagram.com/theopencommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/instagram.svg"
+                alt="instagram icon"
+                width={20}
+                height={20}
+              />
+            </a>
+            <a
+              aria-label="Open Community on YouTube"
+              className="flex items-center hover:underline hover:underline-offset-4 hover:bg-[#625df5] hover:bg-opacity-30 rounded-full p-3"
+              href="https://youtube.com/@theopencommunity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                aria-hidden
+                src="/socials/youtube.svg"
+                alt="youtube icon"
+                width={20}
+                height={20}
+              />
+            </a>
+        </div>
+        <div className="">
+          <p className="text-sm text-center text-[var(--text-c)]">
+            © 2024 Open Community. All rights reserved.
+          </p>
+        </div>
+      </footer>
+  );
+}
