@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { LucideStars, Menu, ExternalLinkIcon, Mail, GitForkIcon } from 'lucide-react';
+import { LucideStars, Menu, ExternalLinkIcon, MailIcon, GitForkIcon } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { defaults } from './utils/constants';
 
@@ -106,7 +106,7 @@ export default function Header() {
               size="sm"
               className="w-full justify-center rounded-md w-1/2"
             >
-              <Mail className="w-3 h-3" />
+              <MailIcon className="w-3 h-3" />
               <span className="ml-2 text-xs">Contact</span>
             </Button>
           </div>
