@@ -1,12 +1,9 @@
 'use client';
-
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Notification from './utils/notify';
 import { loader } from './utils/loader';
-import Footer from './footer';
-import Header from './header';
-import { DownloadIcon } from 'lucide-react';
+import { DownloadIcon, X } from 'lucide-react';
+import { Button } from './components/ui/button';
 
 export default function Home() {
   const [loomUrl, setLoomUrl] = useState('');
@@ -48,11 +45,95 @@ export default function Home() {
         }
     };
 
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+      let val = e.target.value.trim();
+
+      // 2. Disallow braces, brackets, invisible unicode, etc.
+      if (/[{}\[\]\u200B-\u200D\uFEFF]/.test(val)) {
+        console.log('invalid character');
+        return;
+      }
+    
+      // 3. Remove anything after ? or # if you do not allow queries/fragments
+      val = val.replace(/[?#].*$/, '');
+    
+      // 4. Ensure protocol is present; default to https if missing
+      if (!/^https?:\/\//i.test(val)) {
+        val = 'https://' + val;
+      }
+    
+      try {
+        const parsed = new URL(val);
+    
+        // 5. Restrict protocols to only https (optional)
+        if (parsed.protocol !== 'https:') {
+          console.log('only HTTPS allowed');
+          return;
+        }
+    
+        // 6. Check ports (optional)
+        if (parsed.port && !['80', '443'].includes(parsed.port)) {
+          console.log('invalid or unsupported port');
+          return;
+        }
+    
+        // 7. Block local or private IP ranges
+        // (You can do more advanced checking or IP resolution server-side)
+        const hostname = parsed.hostname;
+        if (
+          hostname === 'localhost' ||
+          /^127\.\d+\.\d+\.\d+$/.test(hostname) ||
+          /^10\.\d+\.\d+\.\d+$/.test(hostname) ||
+          /^192\.168\.\d+\.\d+$/.test(hostname) ||
+          hostname.endsWith('.localhost') ||
+          // And so on for other private ranges...
+          hostname.includes('::1')
+        ) {
+          console.log('private/localhost not allowed');
+          return;
+        }
+    
+        // 8. Check for suspicious patterns or direct IP addresses
+        if (
+          hostname.match(/^(\d{1,3}\.){3}\d{1,3}$/) || // IPv4
+          hostname.includes('0x') || // Hex IP
+          hostname.match(/[^a-zA-Z0-9.-]/) // Non-standard chars
+        ) {
+          console.log('suspicious hostname pattern');
+          return;
+        }
+    
+        // 9. Ensure there's a dot in the hostname (basic public domain check)
+        if (!hostname.includes('.') || hostname.length < 3) {
+          console.log('invalid domain');
+          return;
+        }
+  
+        // 10. Final cleaning: reconstruct the allowed final URL
+        val = parsed.origin + parsed.pathname;
+      } catch (error) {
+        console.log('invalid URL');
+        return;
+      }
+    
+      // 12. Success
+      console.log('valid URL: ', val);
+      setLoomUrl(val);
+    }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Backspace' && e.metaKey) {
+        // Clear input on Command + Backspace
+        setLoomUrl("");
+      }
+      if (e.key === 'Backspace' && e.ctrlKey) {
+        // Clear input on Ctrl + Backspace
+        setLoomUrl("");
+      }
+    };
+
   return (
-    <>
-      <Header />
-    <div className="bg-[var(--bg-a)] items-center justify-center min-h-screen mx-auto flex flex-col px-4 sm:px-0 w-full max-w-2xl font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col space-y-8 items-center justify-center min-h-screen mx-auto w-full pb-20">
+      <main className="flex flex-col space-y-8 items-center justify-center mx-auto my-auto bg-[var(--bg-a)] px-4 sm:px-0 w-full max-w-2xl">
           
           {notification && (
             <Notification
@@ -74,32 +155,45 @@ export default function Home() {
             <input
               type="text"
               value={loomUrl}
-              onChange={(e) => setLoomUrl(e.target.value)}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
               placeholder="Enter loom video link here..."
               className="placeholder:text-[var(--text-c)] placeholder:text-sm flex h-12 w-full text-sm bg-transparent focus:outline-none text-[var(--text-a)] w-full pr-12 py-3 pl-6 rounded-full shadow transition-colors border border-[var(--ring)] focus:border-[var(--violet)]"
               disabled={loading}
             />
-            <button
-              disabled={loomUrl === '' || loading}
-              onClick={downloadVideo}
-              className={`absolute right-1 top-2 -translate-y-1/2 h-9 w-9 flex items-center justify-center p-2 text-sm rounded-full shadow-sm transition-all duration-200 
-                ${loomUrl === '' || loading 
-                  ? 'cursor-not-allowed bg-[var(--ring)] text-[var(--text-a)]' 
-                  : 'cursor-pointer bg-[var(--violet)] hover:bg-[var(--ring)] text-[var(--text-a)]'
-                }`}
-            >
-              {!loading 
-                ? (
-                  <DownloadIcon className='w-3 h-3' />
-                )
-                : loader()
-              }
-            </button>
+            <div className='absolute right-1 top-2 -translate-y-1/2 flex flex-row space-x-1'>
+              {loomUrl && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-5 w-5 mt-2 bg-white text-black focus:outline-none flex items-center justify-center"
+                  onClick={
+                    () => {
+                      setLoomUrl("");
+                    }}
+                >
+                  <X className="h-3 w-3" />
+                </Button>
+              )}
+              <button
+                disabled={loomUrl === '' || loading}
+                onClick={downloadVideo}
+                className={`h-9 w-9 flex items-center justify-center p-2 text-sm rounded-full shadow-sm transition-all duration-200 
+                  ${loomUrl === '' || loading 
+                    ? 'cursor-not-allowed bg-[var(--ring)] text-[var(--text-a)]' 
+                    : 'cursor-pointer bg-[var(--violet)] hover:bg-[var(--ring)] text-[var(--text-a)]'
+                  }`}
+              >
+                {!loading 
+                  ? (
+                    <DownloadIcon className='w-3 h-3' />
+                  )
+                  : loader()
+                }
+              </button>
+            </div>
           </div>
           
       </main>
-    </div>
-        <Footer />
-    </>
   );
 }

@@ -37,7 +37,7 @@ export default function Header() {
   };
 
   return (
-    <header className="border-b border-[var(--ring)] relative p-4 fixed top-0 w-full">
+    <header className="border-b border-[var(--ring-50)] relative p-4 sticky top-0 w-full">
       <div className="mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Link href="https://yaps.gg" className="flex items-center space-x-1" target="_blank" rel="noreferrer">

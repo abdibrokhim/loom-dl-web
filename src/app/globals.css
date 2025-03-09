@@ -5,6 +5,7 @@
 :root {
   --violet: #625df5;
   --ring: #625df580;
+  --ring-50: #625df550;
   --bg-a: #0B0E11;
   --text-a: #FFFFFF;
   --text-b: #C3C4C7;
@@ -14,7 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --violet: hsla(242,88.4%,66.3%,1);
+    --violet: #625df5;
+    --ring: #625df580;
+    --ring-50: #625df550;
     --bg-a: #0B0E11;
     --text-a: #FFFFFF;
     --text-b: #C3C4C7;
@@ -27,7 +30,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 @layer utilities {

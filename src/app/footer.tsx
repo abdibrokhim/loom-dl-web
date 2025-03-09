@@ -45,10 +45,10 @@ function ThemeSwitch() {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--ring)] p-4 fixed bottom-0 w-full">
+    <footer className="border-t border-[var(--ring-50)] p-4 fixed bottom-0 w-full">
       <div className="flex items-center justify-between">
         <a className='text-[10px] text-white/50 hover:underline' href="https://yaps.gg" target="_blank" rel='noreferrer noopener'>
-            <span>© 2024 YAPS WORLD</span>
+            <span>© 2025 YAPS WORLD</span>
         </a>
         <div className="relative text-xs text-white/50">
           <ThemeSwitch />
