@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Notification from '../utils/notify';
-import Footer from './Footer';
+import Footer from '../footer';
 import { Analytics } from "@vercel/analytics/react"
 import OverlayCard from './overlaycard';
 

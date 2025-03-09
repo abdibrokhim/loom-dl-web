@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const geistSans = localFont({
@@ -14,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "lovido.lol | free loom video downloader",
+  title: "lovido.lol - free open source loom video downloader",
   description: "Download your favorite loom videos using lovido.lol for free!",
 };
 
@@ -28,7 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-a)]`}
       >
+        <Analytics />
+        <div className="flex min-h-screen w-full flex-col pt-1">
+
         {children}
+        </div>
       </body>
     </html>
   );

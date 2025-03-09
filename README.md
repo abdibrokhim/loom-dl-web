@@ -1,20 +1,20 @@
 <div align="center" style="padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9; border-radius: 10px; margin-bottom: 20px;">
-    <h2 style="margin: 0; font-size: 24px; color: #333;">lovido is OUT! 🎉</h2>
+    <h2 style="margin: 0; font-size: 24px; color: #333;">lovido v2 is out now! 🎉</h2>
     <p style="margin: 5px 0 0 0; font-size: 16px; color: #666;">Read all about it on <a href="https://www.linkedin.com/in/abdibrokhim/" style="text-decoration: underline; color: #1a73e8;"> LinkedIn</a>!</p>
 </div>
 
 <!-- markdownlint-disable MD030 -->
 
-# [![Loom Video Downloader](./assets/landing.png)](https://lovido.vercel.app/)
+# [![Loom Video Downloader](./public/images/yapsdotlol-v2-preview.png)](https://lovido.lol)
 
 <p align="center"><strong>
     Download your Loom videos with lovido! 🚀
 </strong></p>
 <p align="center"><strong>
-    It's fully FREE. 💜 
+    Iit's FREE. 💜 
 </strong></p>
 <p align="center"><strong>
-    and Open Source. 🌟
+    it's Open Source. 🌟
 </strong></p>
 
 
