@@ -100,7 +100,7 @@ export default function Header() {
             <div className='text-xs text-white/70 w-1/2'>Enterprise?</div>
             <Button
               onClick={() => {
-                window.open(defaults.SUBSCRIPTION, '_blank')
+                window.open('mailto:abdibrokhim@gmail.com?subject=Enterprise%20Inquiry', '_blank')
               }}
               variant="destructive" 
               size="sm"
