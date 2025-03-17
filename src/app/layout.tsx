@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import Footer from './footer';
 import Header from './header';
+import Ads from "./components/Ads";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <Analytics />
         <Header />
+        <Ads />
         <div className="flex max-w-screen items-center justify-center mt-56 mx-auto w-full flex-col pt-1">
 
           {children}
