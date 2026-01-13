@@ -4,7 +4,8 @@ import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import Footer from './footer';
 import Header from './header';
-import Ads from "./components/Ads";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,11 +31,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--bg-a)] font-[family-name:var(--font-geist-sans)]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)] relative bg-[#000000]`}
       >
         <Analytics />
+        <div className="fixed inset-0 max-h-[60vh] ">
+          <Link href="https://vibe.devpost.com" target="_blank" rel="noopener noreferrer">
+            <Image 
+              src="/hackathon.png" 
+              alt="hackathon" 
+              fill
+              className="object-fit object-repeat cursor-pointer"
+              priority
+            />
+          </Link>
+        </div>
         <Header />
-        <Ads />
         <div className="flex max-w-screen items-center justify-center mt-56 mx-auto w-full flex-col pt-1">
 
           {children}

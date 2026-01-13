@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { LucideStars, Menu, ExternalLinkIcon, MailIcon, GitForkIcon } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { defaults } from './utils/constants';
+import hackathon from '@/public/assets/hackathon.png';
 
 export default function Header() {
   const closeAllDropdowns = () => {
