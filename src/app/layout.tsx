@@ -34,10 +34,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)] relative bg-[#000000]`}
       >
         <Analytics />
-        <div className="fixed inset-0 max-h-[60vh] ">
+        <div className="fixed inset-0 max-h-[90vh] ">
           <Link href="https://vibe.devpost.com" target="_blank" rel="noopener noreferrer">
             <Image 
-              src="/hackathon.png" 
+              src="/web.png" 
               alt="hackathon" 
               fill
               className="object-fit object-repeat cursor-pointer"
