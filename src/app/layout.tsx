@@ -34,17 +34,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-sans)] relative bg-[#000000]`}
       >
         <Analytics />
-        <div className="fixed inset-0 max-h-[90vh] ">
-          <Link href="https://vibe.devpost.com" target="_blank" rel="noopener noreferrer">
-            <Image 
-              src="/web.png" 
-              alt="hackathon" 
-              fill
-              className="object-fit object-repeat cursor-pointer"
-              priority
-            />
-          </Link>
-        </div>
         <Header />
         <div className="flex max-w-screen items-center justify-center mt-56 mx-auto w-full flex-col pt-1">
 
