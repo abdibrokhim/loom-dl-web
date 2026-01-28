@@ -198,8 +198,8 @@ export default function Home() {
           </div>
           
           <div className='text-center text-sm text-white/50'>
-            <p>If it keeps giving you the error "Unexpected end of JSON input".</p>
-            <p>Or you're facing other issues with the download, please upgrade to Pro.</p>
+            <p>If it keeps giving you the error &quot;Unexpected end of JSON input&quot;.</p>
+            <p>Or you&apos;re facing other issues with the download, please upgrade to Pro.</p>
           </div>
 
           <BuyButton subscription_link={subscription_link} />
